@@ -1,0 +1,40 @@
+{
+  "name": "gym_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuri-duque/gym_server.git"
+  },
+  "keywords": [
+    "gym",
+    "node",
+    "typescript",
+    "graphql",
+    "mongodb"
+  ],
+  "author": "yuri-duque",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuri-duque/gym_server/issues"
+  },
+  "homepage": "https://github.com/yuri-duque/gym_server#readme",
+  "dependencies": {
+    "apollo-server-core": "^3.11.1",
+    "apollo-server-express": "^3.11.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "graphql": "^16.6.0",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.14.0",
+    "typescript": "^4.9.5"
+  }
+}
