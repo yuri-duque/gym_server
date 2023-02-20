@@ -1,11 +1,14 @@
 import express from "express";
+import { readFileSync } from "fs";
 import { ApolloServer } from "apollo-server-express";
-import typeDefs from "./src/schema";
-import resolvers from "./src/resolvers";
 import dotenv from "dotenv";
+
+import resolvers from "./resolvers";
 
 dotenv.config();
 const PORT = process.env.PORT;
+
+const typeDefs = readFileSync("./schema.graphql", { encoding: "utf-8" });
 
 async function startApolloServer() {
   console.log("🚀 Starting server...");
