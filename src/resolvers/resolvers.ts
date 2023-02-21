@@ -1,4 +1,4 @@
-import people from "./dataset"; //get all of the available data from our database.
+import people from "../repositories/dataset"; //get all of the available data from our database.
 const Resolvers = {
   Query: {
     getAllPeople: () => people, //if the user runs the getAllPeople command

@@ -3,7 +3,7 @@ import { readFileSync } from "fs";
 import { ApolloServer } from "apollo-server-express";
 import dotenv from "dotenv";
 
-import resolvers from "./resolvers";
+import resolvers from "./resolvers/resolvers";
 
 dotenv.config();
 const PORT = process.env.PORT;
