@@ -1,9 +1,0 @@
-type Person {
-  id: ID!
-  name: String
-}
-
-type Query {
-  getAllPeople: [Person]
-  getPerson(id: Int): Person
-}

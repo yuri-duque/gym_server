@@ -1,0 +1,31 @@
+enum TypeReps {
+  REPETICOES
+  REPETICOES_MAXIMO
+  ISOMETRIA
+  TEMPO
+}
+
+enum TypeWeights {
+  KG
+  PLACAS
+}
+
+enum TypeTime {
+  SEGUNDOS
+  MINUTOS
+}
+
+type Workout {
+  id: String!
+  name: String!
+  typeReps: TypeReps!
+  sets: Int
+  reps: [Int]
+  typeWeights: TypeWeights
+  weights: [Int]
+  typeTime: TypeTime
+  time: Int
+  typeRest: TypeTime
+  rest: Int
+  gifName: String
+}
