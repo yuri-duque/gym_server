@@ -1,13 +1,10 @@
+import { Workout } from "../entities/workout";
+import { Worksheet } from "../entities/worksheet";
 import people from "../repositories/dataset"; //get all of the available data from our database.
 const Resolvers = {
   Query: {
-    getAllPeople: () => people, //if the user runs the getAllPeople command
-    //if the user runs the getPerson command:
-    getPerson: (_: any, args: any) => {
-      console.log(args);
-      //get the object that contains the specified ID.
-      return people.find((person) => person.id === args.id);
-    },
+    getWorkout: () => new Workout(),
+    getWorksheet: () => new Worksheet(),
   },
 };
 export default Resolvers;
