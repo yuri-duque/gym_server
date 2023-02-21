@@ -29,3 +29,7 @@ type Workout {
   rest: Int
   gifName: String
 }
+
+type Query {
+  getWorkout: Workout
+}

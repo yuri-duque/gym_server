@@ -12,23 +12,6 @@ export type Scalars = {
   Float: number;
 };
 
-export type Person = {
-  __typename?: 'Person';
-  id: Scalars['ID'];
-  name?: Maybe<Scalars['String']>;
-};
-
-export type Query = {
-  __typename?: 'Query';
-  getAllPeople?: Maybe<Array<Maybe<Person>>>;
-  getPerson?: Maybe<Person>;
-};
-
-
-export type QueryGetPersonArgs = {
-  id?: InputMaybe<Scalars['Int']>;
-};
-
 export enum TypeReps {
   Isometria = 'ISOMETRIA',
   Repeticoes = 'REPETICOES',
@@ -60,4 +43,11 @@ export type Workout = {
   typeTime?: Maybe<TypeTime>;
   typeWeights?: Maybe<TypeWeights>;
   weights?: Maybe<Array<Maybe<Scalars['Int']>>>;
+};
+
+export type Worksheets = {
+  __typename?: 'Worksheets';
+  id?: Maybe<Scalars['Int']>;
+  name?: Maybe<Scalars['String']>;
+  workouts?: Maybe<Array<Maybe<Workout>>>;
 };

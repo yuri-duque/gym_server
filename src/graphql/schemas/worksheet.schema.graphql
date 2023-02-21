@@ -1,0 +1,9 @@
+type Worksheet {
+  id: Int
+  name: String
+  workouts: [Workout]
+}
+
+type Query {
+  getWorksheet: Worksheet
+}
