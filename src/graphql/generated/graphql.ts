@@ -28,3 +28,36 @@ export type Query = {
 export type QueryGetPersonArgs = {
   id?: InputMaybe<Scalars['Int']>;
 };
+
+export enum TypeReps {
+  Isometria = 'ISOMETRIA',
+  Repeticoes = 'REPETICOES',
+  RepeticoesMaximo = 'REPETICOES_MAXIMO',
+  Tempo = 'TEMPO'
+}
+
+export enum TypeTime {
+  Minutos = 'MINUTOS',
+  Segundos = 'SEGUNDOS'
+}
+
+export enum TypeWeights {
+  Kg = 'KG',
+  Placas = 'PLACAS'
+}
+
+export type Workout = {
+  __typename?: 'Workout';
+  gifName?: Maybe<Scalars['String']>;
+  id: Scalars['String'];
+  name: Scalars['String'];
+  reps?: Maybe<Array<Maybe<Scalars['Int']>>>;
+  rest?: Maybe<Scalars['Int']>;
+  sets?: Maybe<Scalars['Int']>;
+  time?: Maybe<Scalars['Int']>;
+  typeReps: TypeReps;
+  typeRest?: Maybe<TypeTime>;
+  typeTime?: Maybe<TypeTime>;
+  typeWeights?: Maybe<TypeWeights>;
+  weights?: Maybe<Array<Maybe<Scalars['Int']>>>;
+};
