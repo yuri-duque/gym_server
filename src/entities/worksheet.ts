@@ -1,7 +1,7 @@
 import { Workout } from "./workout";
 
-export type Worksheets = {
-  id: number;
-  name: string;
-  workouts: Array<Workout>;
-};
+export class Worksheet {
+  id!: number;
+  name!: string;
+  workouts!: Array<Workout>;
+}

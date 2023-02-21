@@ -1,9 +1,9 @@
 import { TypeReps, TypeTime, TypeWeights } from "../graphql/generated/graphql";
 
-export type Workout = {
-  id: string;
-  name: string;
-  typeReps: TypeReps;
+export class Workout {
+  id!: string;
+  name!: string;
+  typeReps!: TypeReps;
   sets?: number;
   reps?: Array<Number>;
   typeWeights?: TypeWeights;
@@ -13,4 +13,4 @@ export type Workout = {
   typeRest?: TypeTime;
   rest?: Number;
   gifName?: string;
-};
+}
